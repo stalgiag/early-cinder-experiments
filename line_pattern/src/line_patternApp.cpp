@@ -64,7 +64,7 @@ void line_patternApp::drawRow(int y){
 
 void line_patternApp::drawIntoBuffer(){
     gl::ScopedFramebuffer buffer(myFBO);
-    gl::viewport(myFBO->getSize());
+    gl::ScopedViewport(0,800,1000,800);
     gl::color(.4, .5, .7);
     gl::drawSolidCircle(vec2(getWindowWidth()/2, getWindowHeight()/2), 100);
     for (int i=10; i<getWindowHeight(); i+=10) {
