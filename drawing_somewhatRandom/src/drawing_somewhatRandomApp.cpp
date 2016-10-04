@@ -64,9 +64,9 @@ void drawing_somewhatRandomApp::draw()
     gl::clear(Color(255,255,255));
     gl::draw( myFBO->getColorTexture(), Rectf( 20, 20, 600, 600 ));
     gl::color(0, 1, 1);
-    gl::drawStrokedRect(Rectf(20, 20, 375, 465));// this scoped viewport is destroying me this is temporary
+    gl::drawStrokedRect(Rectf(20, 20, 375, 465)); // this scoped viewport is destroying me this is temporary
     gl::color(1,1,1);
-    gl::draw( mTex, Rectf( 400,300,1000,800));
+    gl::draw( mTex, Rectf( 400,300,1000,800 ));
     
     counter++;
 }
